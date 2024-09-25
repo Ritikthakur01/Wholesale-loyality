@@ -1,0 +1,71 @@
+import DateTime from "../../utils/constant/getDate&Time";
+import sequelize from "../../utils/db/dbConnection";
+import { DataTypes } from 'sequelize';
+
+
+export const ContactQuery = sequelize.define('contactquery',{
+    queryId:{
+        type:DataTypes.UUID,
+        defaultValue:DataTypes.UUIDV1,
+        unique:true
+    },
+    name:{
+        type:DataTypes.STRING
+    },
+    email:{
+        type:DataTypes.STRING,
+    },
+    contactNo:{
+        type:DataTypes.STRING,
+    },
+    address:{
+        type:DataTypes.STRING,
+    },
+    city:{
+        type:DataTypes.STRING,
+    },
+    queryType:{
+        type:DataTypes.STRING,
+    },
+    subQueryType:{
+        type:DataTypes.STRING,
+    },
+    description:{
+        type:DataTypes.STRING,
+    },
+    images:{
+        type:DataTypes.JSON
+    },
+    toBeEmail:{
+        type:DataTypes.STRING,
+    },
+    ccEmail:{
+        type:DataTypes.JSON,
+        defaultValue:[]
+    },
+    mailOfHandler:{
+        type:DataTypes.STRING
+    },
+    replyData:{
+        type:DataTypes.TEXT
+    },
+    lastReplyTimestamp:{
+        type:DataTypes.DATE
+    },
+    status:{
+        type:DataTypes.ENUM,
+        values:['Fullfilled','In-Progress','Raised'],
+        defaultValue:'Raised'
+    },
+    updateByStaff:{
+        type:DataTypes.STRING
+    },
+    createdIstAt:{
+        type:DataTypes.STRING, 
+        defaultValue:DateTime()
+    },
+    updatedIstAt:{
+        type:DataTypes.STRING,
+        defaultValue:DateTime()
+    }
+});

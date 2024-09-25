@@ -1,0 +1,48 @@
+Server Base Url :: https://wholesaleloyality-57350bab077c.herokuapp.com
+
+UAT Base Url :: 
+
+:-First Add Role :: Role with Permission
+
+:-First Add Staff ::
+
+:- Membership & card Data
+
+Voucher ::>>
+GetBrands(vouchagram)
+GetAllDetailsOfProducts(woohoo)
+
+localhost:8000/admin/vouchers/getBrand
+{{dev_url}}/admin/vouchers/getWoohooSetting
+{{dev_url}}/admin/vouchers/getAllDetailOfProducts
+
+
+Testing Card :
+4916541713757159 
+09/29
+189
+
+.app
+    .src
+        .assests
+            .coupons
+            .files
+                .sellers
+            .images
+                .card
+                .contactQuery
+                .dsProduct
+                    .product
+                    .thumbnail
+                .images
+                    .tvcCoverImage
+                .tvc
+            .logs
+        .controllers
+        .models
+        .routes
+    .utils
+
+
+
+
